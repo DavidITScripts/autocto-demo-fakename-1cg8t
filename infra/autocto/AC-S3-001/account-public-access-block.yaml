@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+  AC-S3-001 — Account-level S3 Block Public Access (AutoCTO). ManagedBy=AutoCTO via stack tags at deploy.
+
+Resources:
+  AccountPublicAccessBlock:
+    Type: AWS::S3::AccountPublicAccessBlock
+    Properties:
+      BlockPublicAcls: true
+      BlockPublicPolicy: true
+      IgnorePublicAcls: true
+      RestrictPublicBuckets: true
